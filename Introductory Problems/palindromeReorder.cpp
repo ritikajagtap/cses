@@ -6,22 +6,16 @@ using namespace std;
 void solve();
 long long gcd(long long int a, long long int b);
 long long lcm(int a, int b);
-const int N = 200001;
+const long long int MOD = 1e9 + 7;
 
 int main()
 {
-    solve();
+    
 }
-void solve(){
-    long long int n;
-    cin>>n;
-    if(n==1){cout<<"1 ";}
-    if(n==3 || n==2){cout<<"NO SOLUTION"; return;}
-    map<int, int> mp;
-    mp[1] = 2;
-    for(auto it: mp){
-        cout<<it.first<<endl;
-    }
+
+void solve()
+{
+
 }
 long long gcd(long long int a, long long int b)
 {
