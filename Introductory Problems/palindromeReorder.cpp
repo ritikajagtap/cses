@@ -10,7 +10,33 @@ const long long int MOD = 1e9 + 7;
 
 int main()
 {
-    
+    string s;
+    cin>>s;
+    map<char, int> mp;
+    for(auto it: s){
+        mp[it]++;
+    }
+    bool flag = 0;
+    pair<char, int> mid;
+    for(auto it: mp){
+        if(it.second%2==1 && !flag){mid = it; flag=1; continue;}
+        if(it.second % 2 == 1 && flag){cout<<"NO SOLUTION"<<endl; return 0;}
+    }
+    string stnew = "";
+    for(auto it: mp){
+        if(it.second%2 == 0){
+            for(int i=0; i<it.second/2; i++){
+                stnew += it.first;
+                cout<<it.first;
+            }
+        }
+    }
+    reverse(stnew.begin(), stnew.end());
+    for(int i=0; i<mid.second; i++){
+        cout<<mid.first;
+    }
+    cout<<stnew;
+
 }
 
 void solve()
